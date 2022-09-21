@@ -7,9 +7,9 @@
 
     public Client(string name, string lastName, string id, int salary)
     {
-        this.Name = name;
-        this.LastName = lastName;
+        Name = name;
+        LastName = lastName;
         Id = id;
-        this.Salary = salary;
+        Salary = salary;
     }
 }
