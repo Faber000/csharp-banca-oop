@@ -55,6 +55,7 @@ void ViewAll()
     Console.WriteLine("\r\n");
 
     Console.WriteLine("Clients informations");
+    Console.WriteLine("\r\n");
 
     foreach (Client client in ClientList)
     {
@@ -67,6 +68,7 @@ void ViewAll()
     }
 
     Console.WriteLine("Loans informations");
+    Console.WriteLine("\r\n");
     foreach (Loan loan in LoanList)
     {
         Console.WriteLine("Id: " + loan.Id);
