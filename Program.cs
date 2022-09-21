@@ -175,9 +175,12 @@ void AddLoan()
             Console.WriteLine("Please insert installments number");
             int installment = Convert.ToInt32(Console.ReadLine());
 
+            Console.WriteLine("Please insert deadline");
+            string deadline = Console.ReadLine();
+
             DateTime thisDay = DateTime.Today;
 
-            Loan loan = new Loan(client, amount, installment, thisDay.ToString("d"), "25/12/2022");
+            Loan loan = new Loan(client, amount, installment, thisDay.ToString("d"), deadline);
 
             LoanList.Add(loan);
 
