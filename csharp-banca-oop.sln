@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-banca-oop", "csharp-banca-oop.csproj", "{8565D2DD-8674-47B9-8FE3-C76E4BB19CEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8565D2DD-8674-47B9-8FE3-C76E4BB19CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8565D2DD-8674-47B9-8FE3-C76E4BB19CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8565D2DD-8674-47B9-8FE3-C76E4BB19CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8565D2DD-8674-47B9-8FE3-C76E4BB19CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57AEDA89-8FB0-4ADB-B51C-B00C857B5AD7}
+	EndGlobalSection
+EndGlobal
