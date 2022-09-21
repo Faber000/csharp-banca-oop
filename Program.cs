@@ -67,13 +67,13 @@ void ViewTables()
         Console.WriteLine("Name: "+client.Name+" "+client.LastName);
         Console.WriteLine("\r\n");
 
-        Console.WriteLine("Id  |  Ammount  |  Installments  |    Start    |    End  ");
+        Console.WriteLine("Id  |  Amount  |  Installments  |    Start    |    End  ");
 
         foreach (Loan loan in LoanList)
         {
             if(loan.Client.Id == client.Id)
             {
-                Console.WriteLine(loan.Id + "       " + loan.Ammount + "            " + loan.Installment + "        " + loan.DateStart + "      " + loan.DateEnd);
+                Console.WriteLine(loan.Id + "       " + loan.Amount + "            " + loan.Installment + "        " + loan.DateStart + "      " + loan.DateEnd);
                 Console.WriteLine("\r\n");
             }
         }
@@ -104,7 +104,7 @@ void ViewAll()
     {
         Console.WriteLine("Id: " + loan.Id);
         Console.WriteLine("Client name: " + loan.Client.Name+ " "+loan.Client.LastName);
-        Console.WriteLine("Ammount: " + loan.Ammount);
+        Console.WriteLine("Amount: " + loan.Amount);
         Console.WriteLine("Installment number: " + loan.Installment);
         Console.WriteLine("Start date: " + loan.DateStart);
         Console.WriteLine("End date: " + loan.DateEnd);
@@ -118,7 +118,7 @@ void SearchClient()
 {
     bool found = false;
 
-    double ammountCont = 0;
+    double amountCont = 0;
 
     int installmentCont = 0;
 
@@ -132,11 +132,11 @@ void SearchClient()
         {
             found = true;
 
-            ammountCont = ammountCont + loan.Ammount;
+            amountCont = amountCont + loan.Amount;
 
             installmentCont = installmentCont + loan.Installment;
 
-            Console.WriteLine("Client " + loan.Client.LastName + " has started a loan of " + loan.Ammount + "$" + " in " + loan.DateStart);
+            Console.WriteLine("Client " + loan.Client.LastName + " has started a loan of " + loan.Amount + "$" + " in " + loan.DateStart);
             Console.WriteLine("\r\n");
         }
     }
@@ -149,7 +149,7 @@ void SearchClient()
     
     else
     {
-        Console.WriteLine("Client " + id + " has a total ammount of " + ammountCont + "$" + " to pay, in " + installmentCont + " installments");
+        Console.WriteLine("Client " + id + " has a total amount of " + amountCont + "$" + " to pay, in " + installmentCont + " installments");
         Console.WriteLine("\r\n");
     }
 }
@@ -169,15 +169,15 @@ void AddLoan()
         {
             found = true;
 
-            Console.WriteLine("Please insert ammount");
-            double ammount = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please insert amount");
+            double amount = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Please insert installments number");
             int installment = Convert.ToInt32(Console.ReadLine());
 
             DateTime thisDay = DateTime.Today;
 
-            Loan loan = new Loan(client, ammount, installment, thisDay.ToString("d"), "25/12/2022");
+            Loan loan = new Loan(client, amount, installment, thisDay.ToString("d"), "25/12/2022");
 
             LoanList.Add(loan);
 

@@ -2,16 +2,16 @@
 {
     public int Id { get; set; }
     public Client Client { get; set; }
-    public double Ammount { get; set; }
+    public double Amount { get; set; }
     public int Installment { get; set; }
     public string DateStart { get; set; }
     public string DateEnd { get; set; }
 
-    public Loan(Client client, double ammount, int installment, string dateStart, string dateEnd)
+    public Loan(Client client, double amount, int installment, string dateStart, string dateEnd)
     {
         Id = new Random().Next(100);
         Client = client;
-        Ammount = ammount;
+        Amount = amount;
         Installment = installment;
         DateStart = dateStart;
         DateEnd = dateEnd;
