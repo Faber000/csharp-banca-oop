@@ -74,6 +74,7 @@ void ViewTables()
             if(loan.Client.Id == client.Id)
             {
                 Console.WriteLine(loan.Id + "       " + loan.Ammount + "            " + loan.Installment + "        " + loan.DateStart + "      " + loan.DateEnd);
+                Console.WriteLine("\r\n");
             }
         }
     }
