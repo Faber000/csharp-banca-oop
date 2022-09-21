@@ -9,6 +9,7 @@ List<Client> ClientList = new List<Client>();
 string option;
 
 Console.WriteLine("Welcome!");
+Console.WriteLine("\r\n");
 
 do
 {
