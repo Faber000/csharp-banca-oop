@@ -8,7 +8,11 @@ List<Client> ClientList = new List<Client>();
 
 string option;
 
-Console.WriteLine("Welcome!");
+Console.WriteLine("What's the name of the bank?");
+string bankName = Console.ReadLine();
+
+Console.WriteLine("\r\n");
+Console.WriteLine("Welcome on "+ bankName +" bank!");
 Console.WriteLine("\r\n");
 
 do
