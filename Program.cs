@@ -17,7 +17,7 @@ do
     Console.WriteLine("Enter 2 to modify client informations");
     Console.WriteLine("Enter 3 to search for a client");
     Console.WriteLine("Enter 4 to insert new Loan");
-    Console.WriteLine("Enter 5 to view all dates");
+    Console.WriteLine("Enter 5 to view all info");
 
     option = Console.ReadLine();
 
