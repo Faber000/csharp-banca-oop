@@ -89,7 +89,7 @@ void SearchClient()
 
     int installmentCont = 0;
 
-    Console.WriteLine("Please enter client Id");
+    Console.WriteLine("Please enter client Id (Codice Fiscale)");
     string id = Console.ReadLine();
 
     // searching for a loan having the client Id entered
@@ -126,7 +126,7 @@ void AddLoan()
 {
     bool found = false;
 
-    Console.WriteLine("Please insert client Id");
+    Console.WriteLine("Please insert client Id (Codice Fiscale)");
     string id = Console.ReadLine();
     
     // serching for a client having the Id entered
@@ -171,7 +171,7 @@ void AddClient() {
     Console.WriteLine("Enter new client last name");
     string lastName = Console.ReadLine();
 
-    Console.WriteLine("Enter new client Id");
+    Console.WriteLine("Enter new client Id (Codice Fiscale)");
     string id = Console.ReadLine();
 
     Console.WriteLine("Enter new client salary");
@@ -185,12 +185,12 @@ void AddClient() {
 void ModifyClient() {
 
     bool found = false;
-    Console.WriteLine("Please enter client last name");
-    string Name = Console.ReadLine();
+    Console.WriteLine("Please enter client Id (Codice Fiscale)");
+    string cod = Console.ReadLine();
 
     foreach (Client client in ClientList)
     {
-        if(client.LastName == Name)
+        if(client.Id == cod)
         {
             found = true;
             Console.WriteLine("What information do you want to modify?");
@@ -217,7 +217,7 @@ void ModifyClient() {
                     break;
 
                 case "salary":
-                    Console.WriteLine("Enter client name");
+                    Console.WriteLine("Enter client salary");
                     int salary = Convert.ToInt32(Console.ReadLine());
                     client.Salary = salary;
                     break;
