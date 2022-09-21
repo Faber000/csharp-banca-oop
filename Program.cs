@@ -23,6 +23,7 @@ do
     Console.WriteLine("Enter 3 to search for a client");
     Console.WriteLine("Enter 4 to insert new Loan");
     Console.WriteLine("Enter 5 to view all info");
+    Console.WriteLine("Enter 6 to view Loan tables");
 
     option = Console.ReadLine();
 
@@ -48,11 +49,35 @@ do
             ViewAll();
             break;
 
+        case "6":
+            ViewTables();
+            break;
+
         default:
             Console.WriteLine("Please enter existing option");
             break;
     }
 } while (option != "-1");
+
+
+void ViewTables()
+{
+    foreach(Client client in ClientList)
+    {
+        Console.WriteLine("Name: "+client.Name+" "+client.LastName);
+        Console.WriteLine("\r\n");
+
+        Console.WriteLine("Id  |  Ammount  |  Installments  |    Start    |    End  ");
+
+        foreach (Loan loan in LoanList)
+        {
+            if(loan.Client.Id == client.Id)
+            {
+                Console.WriteLine(loan.Id + "       " + loan.Ammount + "            " + loan.Installment + "        " + loan.DateStart + "      " + loan.DateEnd);
+            }
+        }
+    }
+}
 
 void ViewAll()
 {
