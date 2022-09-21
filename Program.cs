@@ -172,7 +172,7 @@ void AddLoan()
             Console.WriteLine("Please insert ammount");
             double ammount = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Please insert installment number");
+            Console.WriteLine("Please insert installments number");
             int installment = Convert.ToInt32(Console.ReadLine());
 
             DateTime thisDay = DateTime.Today;
