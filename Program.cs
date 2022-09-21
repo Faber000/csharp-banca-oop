@@ -17,6 +17,7 @@ do
     Console.WriteLine("Enter 2 to modify client informations");
     Console.WriteLine("Enter 3 to search for a client");
     Console.WriteLine("Enter 4 to insert new Loan");
+    Console.WriteLine("Enter 5 to view all dates");
 
     option = Console.ReadLine();
 
@@ -38,11 +39,47 @@ do
             AddLoan();
             break;
 
+        case "5":
+            ViewAll();
+            break;
+
         default:
             Console.WriteLine("Please enter existing option");
             break;
     }
 } while (option != "-1");
+
+void ViewAll()
+{
+    Console.WriteLine("Here's the actual situation of Loans and Clients");
+    Console.WriteLine("\r\n");
+
+    Console.WriteLine("Clients informations");
+
+    foreach (Client client in ClientList)
+    {
+        Console.WriteLine("Name: "+client.Name);
+        Console.WriteLine("Last Name: "+client.LastName);
+        Console.WriteLine("Id: "+client.Id);
+        Console.WriteLine("Salary: "+client.Salary);
+        Console.WriteLine("\r\n");
+
+    }
+
+    Console.WriteLine("Loans informations");
+    foreach (Loan loan in LoanList)
+    {
+        Console.WriteLine("Id: " + loan.Id);
+        Console.WriteLine("Client name: " + loan.Client.Name+ " "+loan.Client.LastName);
+        Console.WriteLine("Ammount: " + loan.Ammount);
+        Console.WriteLine("Installment number: " + loan.Installment);
+        Console.WriteLine("Start date: " + loan.DateStart);
+        Console.WriteLine("End date: " + loan.DateEnd);
+        Console.WriteLine("\r\n");
+
+    }
+
+}
 
 void SearchClient()
 {
